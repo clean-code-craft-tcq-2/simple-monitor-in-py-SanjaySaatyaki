@@ -1,6 +1,6 @@
 def isInRange(value, min_value, max_value=None):
   if max_value == None:
-    return value > min_value
+    return value < min_value
   if value < min_value or value > max_value:
     return True
 
