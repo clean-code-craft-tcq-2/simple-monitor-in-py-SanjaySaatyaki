@@ -1,7 +1,7 @@
-def isInRange(value, min_value, max_value=-1):
-  if max_value == -1:
+def isInRange(value, min_value, max_value=None):
+  if max_value == None:
     return value > min_value
-  if value > min_value and value < max_value:
+  if value < min_value or value > max_value:
     return True
 
 def battery_is_ok(temperature, soc, charge_rate):
@@ -11,7 +11,7 @@ def battery_is_ok(temperature, soc, charge_rate):
   if isInRange(soc,20,80):
     print('State of Charge is out of range!')
     return False
-  if isInRange(charge_rate,0.8):
+  if not isInRange(charge_rate,0.8):
     print('Charge rate is out of range!')
     return False
 
