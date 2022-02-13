@@ -64,9 +64,13 @@ def battery_param_status(params,enable_warning,lang):
     battery_params[param] = status
 
   display_param_status(battery_params,lang)
+
   return battery_params
       
 if __name__ == '__main__':
   assert(battery_param_status({'temperature':25,'soc':70,'charge_rate':0.1},True,"EN") == {'temperature': 'NORMAL', 'soc': 'NORMAL', 'charge_rate': 'NORMAL'})
+  assert(battery_param_status({'temperature':43,'soc':70,'charge_rate':0.1},True,"EN") == {'temperature': 'HIGH LEVEL WARNING', 'soc': 'NORMAL', 'charge_rate': 'NORMAL'})
+  assert(battery_param_status({'temperature':43,'soc':70,'charge_rate':0.1},False,"EN") == {'temperature': 'NORMAL', 'soc': 'NORMAL', 'charge_rate': 'NORMAL'})
   assert(battery_param_status({'temperature':50,'soc':85,'charge_rate':0},False,"DE") == {'temperature': 'HIGH LEVEL BREACHED', 'soc': 'HIGH LEVEL BREACHED', 'charge_rate': 'HIGH LEVEL BREACHED'})
   
+  assert(convert_to_language(['temperature','LOW LEVEL BREACHED'],"DE") == "Temperatur\tNIEDRIGES NIVEAU ERREICHT")
