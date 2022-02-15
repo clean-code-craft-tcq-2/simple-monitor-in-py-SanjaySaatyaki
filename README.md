@@ -1,3 +1,7 @@
+## extend-refactor Implemented
+- Extension 1: Early Warning
+- Extension 2: Support a language in addition to English
+
 # Programming Paradigms
 
 Electric Vehicles have BMS - Battery Management Systems
