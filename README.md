@@ -1,3 +1,7 @@
+## extend-refactor Implemented
+- Extension 1: Early Warning
+- Extension 2: Support a language in addition to English
+
 # Programming Paradigms
 
 Electric Vehicles have BMS - Battery Management Systems
@@ -56,3 +60,8 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Apect oriented to capture repeating aspects
+
+## extend-refactor
+
+- Extension 1: Early Warning
+- Extension 2: Support a language in addition to English
